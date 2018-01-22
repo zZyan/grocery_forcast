@@ -1,18 +1,42 @@
-Attemp 0: machine learning models
+## Attemp 0: machine learning models
 Best output:
 Model: Gradient Boosting
 Score: 1.185
 
-Attemp 1: folked from kaggle: emsemble of moving average and median
+## Attemp 1: folked from kaggle: emsemble of moving average and median
 Score: 0.519
 
+## Attemp 2: simple lstm model
+### Data: two dataframe: 
+- time-series data only, each store+item combination takes one line, each day takes one column (train_pivot.feat)
+- item and store features merged from stores.csv and items.csv
 
-Attemp 2:
+### Process data for LSTM
+Timesteps: 5
+Predict span: 10 
+Validation set: 115 days (because of the the timesteps, there will be 5 days shifting,  setting number of days to be encoded be 100 and number of days to predict be 10)
+Training set: 292 days (each batch will take 100 days )
 
+Experiment logs
+Model 0:
+LSTM: 126 units
+LSTM: 64 units
+Merge features input 
+Dense: 64 units relu activation 
+Dense: 10 units relu activation
 
-Attempt 3： seq2seq model 
+Results: nan loss (still not fixed), tried following 
+- normalize with z-score
+- min max normalize
+- change to GRU (suspect gradient exploding)
+- change to a smaller batch
+- change to a smaller network (with dropouts)
+- use only one timeseries, still nan loss, while accuracy is 1 
+ 
 
-seq2seq 
+### Attempt 3： seq2seq model (did not start)
+
+seq2seq case study from one Kaggle competition winner team
 https://www.kaggle.com/c/web-traffic-time-series-forecasting/discussion/43795
 learning: 
 choice of model: 
@@ -56,4 +80,3 @@ SMAC
 
 Define problem: 
 
-# grocery_forecast
