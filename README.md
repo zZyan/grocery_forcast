@@ -8,7 +8,7 @@ Score: 0.519
 
 ## Attemp 2: simple lstm model
 ### Data: two dataframe: 
-- time-series data only, each store+item combination takes one line, each day takes one column (train_pivot.feat)
+- time-series data only, each store+item combination takes one line, each day takes one column (train_pivot.feat), log1exp for all the unit_sales
 - item and store features merged from stores.csv and items.csv, one hot encoded, all normalized
 
 ### Process data for LSTM
@@ -48,7 +48,7 @@ including past predictions (learn to be conservative to avoid extreme prediction
 
 feature engineering 
 minimized to allow rnn to learn on its own  
-1. log1exp for price 
+1. log1exp for sales 
 2. quarter to quarter, year to year autocorrelation 
 
 
