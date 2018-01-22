@@ -9,13 +9,13 @@ Score: 0.519
 ## Attemp 2: simple lstm model
 ### Data: two dataframe: 
 - time-series data only, each store+item combination takes one line, each day takes one column (train_pivot.feat)
-- item and store features merged from stores.csv and items.csv
+- item and store features merged from stores.csv and items.csv, one hot encoded, all normalized
 
 ### Process data for LSTM
-Timesteps: 5
-Predict span: 10 
-Validation set: 115 days (because of the the timesteps, there will be 5 days shifting,  setting number of days to be encoded be 100 and number of days to predict be 10)
-Training set: 292 days (each batch will take 100 days )
+- Timesteps: 5
+- Predict span: 10 
+- Validation set: 115 days (because of the the timesteps, there will be 5 days shifting,  setting number of days to be encoded be 100 and number of days to predict be 10)
+- Training set: 292 days (each batch will take 100 days)
 
 Experiment logs
 Model 0:
