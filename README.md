@@ -19,11 +19,11 @@ Training set: 292 days (each batch will take 100 days )
 
 Experiment logs
 Model 0:
-LSTM: 126 units
-LSTM: 64 units
-Merge features input 
-Dense: 64 units relu activation 
-Dense: 10 units relu activation
+- LSTM: 126 units
+- LSTM: 64 units
+- Merge features input 
+- Dense: 64 units relu activation 
+- Dense: 10 units relu activation
 
 Results: nan loss (still not fixed), tried following 
 - normalize with z-score
